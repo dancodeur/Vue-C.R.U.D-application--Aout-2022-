@@ -9,7 +9,7 @@
             <td>{{ poste }}</td>
             <td>{{ salaire }} €</td>
             <td>
-                <span class="rounded-md text-xs" :class="disable === false ? 'bg-green-500 text-white text-center px-3 ':' bg-red-500 text-white text-center px-3'">
+                <span class="rounded-md text-xs" :class="disable === false ? 'bg-green-500 dark:bg-blue-800 text-white text-center px-3 ':' bg-red-500 dark:bg-orange-600 text-white text-center px-3'">
                    <span v-if="disable===false" class="lowercase">
                       Actif
                    </span>
