@@ -4,22 +4,22 @@
      
      <ModalSearch>
           <template #ModalContent>
-              <div v-if="ModalSearch" class="bg-white shadow-md absolute w-[50%] h-[20%] px-4 py-4 text-slate-400 text-sm rounded-sm">
+              <div v-if="ModalSearch" class="bg-white  shadow-md absolute w-[50%] h-[20%] px-4 py-4 text-slate-400 text-sm rounded-sm dark:bg-slate-800 dark:text-slate-300">
                  <!--search icon-->
                  <div class="flex justify-end">
-                      <svg @click="closeSearch()" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer hover:transition ease-linear duration-300 hover:stroke-red-500 active:transform active:scale-110 " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <svg @click="closeSearch()" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer hover:transition ease-linear duration-300 hover:stroke-red-500 active:transform active:scale-110  " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                       </svg>
                  </div>
                  
                  <!--search Modal search input-->
-                 <div class="px-4 flex mt-2 items-center group space-x-1 border-b-2  border-spacing-2">
+                 <div class="px-4 flex mt-2 items-center group space-x-1 border-b-2  border-spacing-2 dark:border-none">
                      <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:stroke-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:stroke-green-500 dark:group-hover:stroke-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                      </div>
-                     <input type="text" placeholder="search user..." v-model="UserSearch" class="px-3 py-2 outline-none w-full focus:text-green-500 " >
+                     <input type="text" placeholder="search user..." v-model="UserSearch" class="px-3 py-2 outline-none w-full focus:text-green-500 dark:focus:text-blue-600 dark:bg-slate-100 dark:focus:transition ease-in-out duration-300 dark:focus:bg-transparent  " >
                  </div>
                 <!--Botton bloc (vous recherchez...)-->
                  <div class="mt-2 flex justify-center">
@@ -43,13 +43,13 @@
 
          <template #AS>
              <transition name="add">
-                   <div class="bg-white rounded-md text-sm px-4 py-4 mb-3"  v-if="blocAdd">
+                   <div class="bg-white dark:bg-slate-800 rounded-md text-sm px-4 py-4 mb-3"  v-if="blocAdd">
                        <div class="flex justify-around items-center">
-                            <input type="text" placeholder="Nom" v-model="nom" class="px-3 py-2 outline-none rounded-md bg-slate-50 place-content-center placeholder-slate-300 text-sm focus:transition ease-in-out duration-300 focus:bg-transparent focus:outline-slate-100 focus:rounded-none focus:outline-1 focus:placeholder-slate-300">
-                            <input type="text" placeholder="Prénom" v-model="prenom" class="px-3 py-2 outline-none rounded-md bg-slate-50 place-content-center placeholder-slate-300 text-sm focus:transition ease-in-out duration-300 focus:bg-transparent focus:outline-slate-100 focus:rounded-none focus:outline-1 focus:placeholder-slate-300">
-                            <input type="text" placeholder="Poste" v-model="poste" class="px-3 py-2 outline-none rounded-md bg-slate-50 place-content-center placeholder-slate-300 text-sm focus:transition ease-in-out duration-300 focus:bg-transparent focus:outline-slate-100 focus:rounded-none focus:outline-1 focus:placeholder-slate-300">
-                            <input type="number" placeholder="Salaire" v-model="salaire" class="px-3 py-2 outline-none rounded-md bg-slate-50 place-content-center placeholder-slate-300 text-sm focus:transition ease-in-out duration-300 focus:bg-transparent focus:outline-slate-100 focus:rounded-none focus:outline-1 focus:placeholder-slate-300">
-                            <button @click="save()" class=" bg-green-600 px-4 text-white py-2 flex space-x-1 items-center hover:transition ease-in-out duration-500 hover:bg-green-500 active:transform active:scale-110">
+                            <input type="text" placeholder="Nom" v-model="nom" class="px-3 py-2 outline-none rounded-md bg-slate-100 place-content-center placeholder-slate-500 text-sm dark:text-slate-500 focus:transition ease-in-out duration-300 focus:bg-transparent focus:outline-slate-100 focus:rounded-none focus:outline-1 dark:focus:outline-blue-600 focus:placeholder-slate-300">
+                            <input type="text" placeholder="Prénom" v-model="prenom" class="px-3 py-2 outline-none rounded-md bg-slate-100 place-content-center placeholder-slate-500 text-sm dark:text-slate-500 focus:transition ease-in-out duration-300 focus:bg-transparent focus:outline-slate-100 focus:rounded-none focus:outline-1 dark:focus:outline-blue-600 focus:placeholder-slate-300">
+                            <input type="text" placeholder="Poste" v-model="poste" class="px-3 py-2 outline-none rounded-md bg-slate-100 place-content-center placeholder-slate-500 text-sm dark:text-slate-500 focus:transition ease-in-out duration-300 focus:bg-transparent focus:outline-slate-100 focus:rounded-none focus:outline-1 dark:focus:outline-blue-600 focus:placeholder-slate-300">
+                            <input type="number" placeholder="Salaire" v-model="salaire" class="px-3 py-2 outline-none rounded-md bg-slate-100 place-content-center placeholder-slate-500 text-sm dark:text-slate-500 focus:transition ease-in-out duration-300 focus:bg-transparent focus:outline-slate-100 focus:rounded-none focus:outline-1 dark:focus:outline-blue-600 focus:placeholder-slate-300">
+                            <button @click="save()" class=" bg-green-600 dark:bg-blue-600 px-4 text-white py-2 flex space-x-1 items-center hover:transition ease-in-out duration-500 hover:bg-green-500 active:transform active:scale-110">
                                Confirmé
                             </button>
                             <div>
@@ -74,7 +74,7 @@
                       </svg>
 
                       <!--Modal Option-->
-                      <div v-show="ModalOption" :class="persons.id === ModalId ?'':'hidden'" class="bg-white text-slate-500 text-sm px-6 py-3 shadow-md rounded-md absolute -top-16  -right-6">
+                      <div v-show="ModalOption" :class="persons.id === ModalId ?'':'hidden'" class="bg-white dark:bg-slate-800 text-slate-500 text-sm px-6 py-3 shadow-md dark:shadow-lg rounded-md absolute -top-16  -right-6">
                           <div @click="Edit(persons.id)" class="flex space-x-2 items-center mb-2 group focus:animate-ping">
                               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:stroke-red-500 hover:transition duration-300 ease-in-out hover:transform hover:scale-125 group-active:animate-ping " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
@@ -96,12 +96,12 @@
               <!--Edit Bloc...-->
               <div>
                    <transition name="edit">
-                      <div class="bg-white rounded-md shadow-sm text-sm px-4 py-3 mb-3"  v-show="blocEdit" :class="persons.id === EditId?'':'hidden'">
+                      <div class="bg-white dark:bg-slate-800 rounded-md shadow-sm text-sm px-4 py-3 mb-3"  v-show="blocEdit" :class="persons.id === EditId?'':'hidden'">
                           <div class="flex justify-around items-center">
-                               <input type="text"  placeholder="Nom" v-model="persons.nom" class="px-3 py-2 outline-none rounded-md bg-slate-50 place-content-center placeholder-slate-300 text-sm focus:transition ease-in-out duration-300 focus:bg-transparent focus:outline-slate-100 focus:rounded-none focus:outline-1 focus:placeholder-slate-300">
-                               <input type="text"  placeholder="Prénom" v-model="persons.prenom" class="px-3 py-2 outline-none rounded-md bg-slate-50 place-content-center placeholder-slate-300 text-sm focus:transition ease-in-out duration-300 focus:bg-transparent focus:outline-slate-100 focus:rounded-none focus:outline-1 focus:placeholder-slate-300">
-                               <input type="text"  placeholder="Poste" v-model="persons.poste" class="px-3 py-2 outline-none rounded-md bg-slate-50 place-content-center placeholder-slate-300 text-sm focus:transition ease-in-out duration-300 focus:bg-transparent focus:outline-slate-100 focus:rounded-none focus:outline-1 focus:placeholder-slate-300">
-                               <input type="number" placeholder="Salaire" v-model="persons.salaire" class="px-3 py-2 outline-none rounded-md bg-slate-50 place-content-center placeholder-slate-300 text-sm focus:transition ease-in-out duration-300 focus:bg-transparent focus:outline-slate-100 focus:rounded-none focus:outline-1 focus:placeholder-slate-300">
+                               <input type="text"  placeholder="Nom" v-model="persons.nom" class="px-3 py-2 outline-none rounded-md bg-slate-100 place-content-center placeholder-slate-500 text-sm dark:text-slate-500 focus:transition ease-in-out duration-300 focus:bg-transparent focus:outline-slate-100 focus:rounded-none focus:outline-1 dark:focus:outline-blue-600 focus:placeholder-slate-300">
+                               <input type="text"  placeholder="Prénom" v-model="persons.prenom" class="px-3 py-2 outline-none rounded-md bg-slate-100 place-content-center placeholder-slate-500 text-sm dark:text-slate-500 focus:transition ease-in-out duration-300 focus:bg-transparent focus:outline-slate-100 focus:rounded-none focus:outline-1 dark:focus:outline-blue-600 focus:placeholder-slate-300">
+                               <input type="text"  placeholder="Poste" v-model="persons.poste" class="px-3 py-2 outline-none rounded-md bg-slate-100 place-content-center placeholder-slate-500 text-sm dark:text-slate-500 focus:transition ease-in-out duration-300 focus:bg-transparent focus:outline-slate-100 focus:rounded-none focus:outline-1 dark:focus:outline-blue-600 focus:placeholder-slate-300">
+                               <input type="number" placeholder="Salaire" v-model="persons.salaire" class="px-3 py-2 outline-none rounded-md bg-slate-100 place-content-center placeholder-slate-500 text-sm dark:text-slate-500 focus:transition ease-in-out duration-300 focus:bg-transparent focus:outline-slate-100 focus:rounded-none focus:outline-1 dark:focus:outline-blue-600 focus:placeholder-slate-300">
                                <div>
                                    <svg @click="closeEdit()" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer hover:transition ease-linear duration-300 hover:stroke-red-500 active:transform active:scale-110 " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -112,12 +112,25 @@
                   </transition>
               </div>
 
-
-
+              
+               
           </div>
         </template>
 
       </Tab>
+
+       <!--empty database-->
+      <transition name="empty">
+            <div v-if="person.length==0" class=" mt-3 w-[50%] h-[30%] px-4 py-4 bg-white dark:bg-slate-800 shadow-sm mx-auto rounded-md">
+                <h1 class="text-center text-2xl font-bold mb-1">Il n'y a aucun utilisateur pour le moment</h1>
+                <div class="flex justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-7.536 5.879a1 1 0 001.415 0 3 3 0 014.242 0 1 1 0 001.415-1.415 5 5 0 00-7.072 0 1 1 0 000 1.415z" clip-rule="evenodd" />
+                      </svg>
+                </div>
+            </div>
+      </transition>
+
     </template>
   </Dashbord>
 </template>
@@ -303,5 +316,16 @@ export default {
 
   opacity: 0;
   transform: translateY(-25px);
+}
+
+.empty-enter-active,
+.empty-leave-active{
+  transform: translateY(25px);
+  transition: ease-in-out 0.5ms ;
+}
+
+.empty-enter-from,
+.empty-leave-to{
+     opacity: 0;
 }
 </style>
